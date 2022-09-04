@@ -11,7 +11,7 @@ if(inputLine != null)
     {
         if (number % 2 == 0)
         {
-            Console.Write(number + ", ");            
+            Console.Write(number+ ", ");            
         }
         number++;        
     }       

@@ -12,7 +12,7 @@ if(inputLine != null)
         Console.WriteLine("да");      
     }
     else
-    {
+    { 
         Console.WriteLine("нет");
     }    
 }
