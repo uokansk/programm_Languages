@@ -1,5 +1,5 @@
 ﻿//=================================================
-// Напишите программу, которая выводит третью цифру 
+// Напишите программу, которая выводит третью цифру
 // заданного числа или сообщает, что третьей цифры нет.
 //==================================================
 
@@ -17,7 +17,7 @@
 
 
 string inputLine = "";
-char[] charArray = {};
+char[] charArray = { };
 
 void ReadData()
 {
@@ -27,16 +27,15 @@ void ReadData()
 
 void CalculateData()
 {
-    if(inputLine != null && inputLine.Length >= 3)
+    if (inputLine != null && inputLine.Length >= 3)
     {
-        charArray = inputLine.ToCharArray();        
+        charArray = inputLine.ToCharArray();
     }
-    
 }
 
 void PrintData()
 {
-    if(charArray[2] != null)
+    if (charArray[2] != null)
     {
         Console.WriteLine("третья цифра " + charArray[2]);
     }
