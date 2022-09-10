@@ -14,7 +14,7 @@ int ReadData(string line) // это метод
     return number;
 }
 
-// вычисляем расстояние между 2 точками
+// сравниваем первую цифру с последней и вторую с предпоследней
 bool Polindrom(int number)
 {
     if ((number / 10000 == number % 10) && ((number / 1000) % 10) == (number % 100) / 10)
@@ -35,6 +35,5 @@ void PrintResult(string line)
 // ввести данные
 int number = ReadData("Введите 5 значное число: ");
 
-// bool res = Polindrom(number);
-
+//выводим полученный результат
 PrintResult(Polindrom(number).ToString());
