@@ -37,5 +37,3 @@ int Y2 = ReadData("Введите координату Y2: ");
 double res = CalculateData(X1, Y1, X2, Y2);
 
 PrintResult(Math.Round(res, 2).ToString());
-
-// Console.Write(distance);
