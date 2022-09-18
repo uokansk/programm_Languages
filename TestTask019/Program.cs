@@ -14,9 +14,10 @@
 //     return number;
 // }
 
-// // сравниваем первую цифру с последней и вторую с предпоследней
+// сравниваем первую цифру с последней и вторую с предпоследней
 // bool Polindrom(int number)
 // {
+//     int[] array = number.ToArray();
 //     if ((number / 10000 == number % 10) && ((number / 1000) % 10) == (number % 100) / 10)
 //     {
 //         return true;
@@ -45,15 +46,29 @@ Console.Write("Введите число: ");
 string? inputLine = Console.ReadLine();
 if (inputLine != null)
 {
-    int inputNumber = int.Parse(inputLine);
+    long inputNumber = long.Parse(inputLine);
     // int digitCount = (int)Math.Log10(inputNumber) + 1; //длина числа
-    int digitCount = inputLine.ToString().Length;  //длина числа
+    long digitCount = inputLine.Length;  //длина числа
+    // char[] array = inputNumber.ToString().Reverse().ToArray();
+    long reversArray = long.Parse(inputNumber.ToString().Reverse().ToArray());
+    if (reversArray == inputNumber)
+    {
+        // return true;
+        Console.WriteLine("true");
+    }
+    else
+    {
+        // return false;
+        Console.WriteLine("false");
+    }
 
     
     Console.WriteLine(digitCount);
-    Console.WriteLine(inputNumber);
+    Console.WriteLine(reversArray);
 }
 
+DateTime d1 = DateTime.Now;
+Console.WriteLine(DateTime.Now - d1);
 
 // string s = Console.ReadLine();
 
