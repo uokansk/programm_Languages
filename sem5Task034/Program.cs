@@ -30,7 +30,7 @@ int[] GenerateArray(int arrLength, int startVal, int finalVal)
 }
 
 // метод количества положительных чисел
-int CountPositivNumbers(int[] array)
+int CountEvenNumbers(int[] array)
 {
     int countPositiv = 0;
     for (int i = 0; i < array.Length; i++)
@@ -64,5 +64,5 @@ int arrayLength = ReadData("Длина массива: ");
 int[] arr = GenerateArray(arrayLength, startVal, finalVal);
 PrintArray(arr);
 
-int res = CountPositivNumbers(arr);
+int res = CountEvenNumbers(arr);
 PrintResult("Количество положительных чисел в массиве: " + res);
