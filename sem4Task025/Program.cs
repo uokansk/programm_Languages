@@ -13,7 +13,7 @@ int ReadData(string line) // это метод
 }
 
 // метод с циклом
-long Pow(int num, int pow)
+long PowFor(int num, int pow)
 {
     long numPow = 1;
     for (int i = 0; i < pow; i++)
@@ -35,17 +35,17 @@ void PrintResult(string line)
     Console.WriteLine(line);
 }
 
-int numA = ReadData("Введите число: ");
-int numB = ReadData("Введите степень: ");
+int number = ReadData("Введите число: ");
+int power = ReadData("Введите степень: ");
 
 DateTime d1 = DateTime.Now;
-long res = Pow(numA, numB);
+long res = PowFor(number, power);
 Console.Write("метод с циклом ");
 Console.WriteLine(DateTime.Now - d1);
 PrintResult(res + " ");
 
 DateTime d2 = DateTime.Now;
-long resMath = PowMath(numA, numB);
+long resMath = PowMath(number, power);
 Console.Write("метод с Math.Pow(x,y) ");
 Console.WriteLine( DateTime.Now - d2);
 PrintResult(resMath + " ");
