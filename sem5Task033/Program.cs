@@ -35,32 +35,50 @@ void PrintArray(int[] array)
     Console.WriteLine(array[array.Length - 1]);
 }
 
-bool FindElement(int element, int[] array)
+// bool FindElement(int element, int[] array)
+// {
+//     bool res = false;
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (array[i] == element)
+//         {
+//             res = true;
+//             break;
+//         }
+//     }
+//     return res;
+// }
+
+int FindElement(int element, int[] array)
 {
-    bool res = false;
+    int index = -1;
     for (int i = 0; i < array.Length; i++)
     {
         if (array[i] == element)
         {
-            res = true;
-            break;
+            return i;
         }
     }
-    return res;
+    return -1;
 }
 
-void PrintResult(string line)
+// void PrintResult(string line)
+// {
+//     Console.WriteLine(line);
+// }
+
+void PrintAnswer(int index)
 {
-    Console.WriteLine(line);
+    Console.WriteLine(index > 0 ? ("Да " + index) : "Нет");
 }
 
 int arrayLength = ReadData("Количество элементов: ");
 int startVal = ReadData("Начальное значение: ");
 int finalVal = ReadData("Конечное значение: ");
-int element = ReadData("Введите искомый элемент: ");
 
 int[] arr = GenerateArray(arrayLength, startVal, finalVal);
 PrintArray(arr);
 
-bool res = FindElement(element, arr);
-PrintResult(" " + res);
+int element = ReadData("Введите искомый элемент: ");
+// bool res = FindElement(element, arr);
+PrintAnswer(FindElement(element, arr));

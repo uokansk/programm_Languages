@@ -24,7 +24,7 @@ int[] GenerateArray(int arrLength, int startVal, int finalVal)
 
     for (int i = 0; i < arrLength; i++)
     {
-        array[i] = numSintezator.Next(startVal, finalVal + 1);
+        array[i] = numSintezator.Next(startVal, finalVal + 1);  //  .NextDoubl
     }
     return array;
 }
@@ -66,8 +66,8 @@ int DifferenceMaxMin(int maxElement, int minElement)
 // метод подсчета объедененный с мин макс
 int DifferenceMaxMinVariantTwo(int[] array)
 {
-    int minElement = array[0];
-    int maxElement = array[0];
+    int minElement = array[0];       // double Min = int.MaxValue
+    int maxElement = array[0];       // double Max = int.MinValue
     for (int i = 0; i < array.Length; i++)
     {
         if (minElement > array[i])
