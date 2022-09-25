@@ -42,7 +42,13 @@ int ReadData(string line)
     return number;
 }
 
-int number = ReadData("введите число ");
-string numBin = Convert.ToString(number, 2);
+int numb = ReadData("введите число ");
+string numBin = Convert.ToString(numb, 2);
 
-Console.Write($"Число {number} в двоичной системе: {numBin}");
+Console.WriteLine($"Число {numb} в двоичной системе: {numBin}");
+
+ numBin = Convert.ToString(numb, 8);
+Console.WriteLine($"Число {numb} в восьмеричной системе: {numBin}");
+
+ numBin = Convert.ToString(numb, 16);
+Console.WriteLine($"Число {numb} в шестнадцатеричной системе: {numBin}");
