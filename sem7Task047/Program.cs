@@ -13,7 +13,7 @@ double[,] Generate2DArray(int row, int colum, int startVal, int finalVal)
     {
         for (int j = 0; j < colum; j++)
         {
-            array2D[i, j] = numGen.Next(startVal, finalVal) + Math.Round(numGen.NextDouble(),2);
+            array2D[i, j] = numGen.Next(startVal, finalVal) + Math.Round(numGen.NextDouble(), 2);
         }
     }
     return array2D;
@@ -46,13 +46,19 @@ void Print2DArrayColor(double[,] arr)
     {
         for (int j = 0; j < arr.GetLength(1); j++)
         {
-            Console.ForegroundColor = myColor[new System.Random().Next(0, 15)];
-            Console.Write($"{arr[i, j]}\t");
-            Console.ResetColor();
+            char[] number = arr[i, j].ToString().ToCharArray();
+            for (int k = 0; k < number.Length; k++)
+            {
+                Console.ForegroundColor = myColor[new System.Random().Next(0, 15)];
+                // Console.Write($"{arr[i, j]}\t");
+                Console.Write(number[k]);
+                Console.ResetColor();
+            }
+            Console.Write("\t");
         }
         Console.WriteLine();
     }
 }
 
-double[,] arr2D = Generate2DArray(10, 10, 10, 99);
+double[,] arr2D = Generate2DArray(10, 5, 10, 99);
 Print2DArrayColor(arr2D);
