@@ -45,8 +45,8 @@ void SortArray(int[,] arr2D)
 {
   for (int i = 0; i < arr2D.GetLength(0); i++)
   {
-    // for (int j = 0; j < arr2D.GetLength(1); j++)
-    // {
+    for (int j = 0; j < arr2D.GetLength(1); j++)
+    {
       for (int k = 0; k < arr2D.GetLength(1) - 1; k++)
       {
         if (arr2D[i, k] < arr2D[i, k + 1])
@@ -56,7 +56,7 @@ void SortArray(int[,] arr2D)
           arr2D[i, k] = temp;
         }
       }
-    // }
+    }
   }
 }
 
